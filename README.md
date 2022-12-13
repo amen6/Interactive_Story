@@ -5,6 +5,10 @@
 > Zohal (Website)
 ---
 
+# Live Demo
+[Live Demo Here](https://amen6.github.io/Interactive_Story/)
+
+---
 ## Description
 Zohal, is a game that takes place in space, the heroine of the game is "Zohal", and she is an astronaut who was sent on a mission to one of the space stations, but upon reaching the station they received an attack from aliens, and "Zohal" remained the only survivor looking for a way to survive.
 
@@ -18,7 +22,7 @@ You lose the game if you run out of oxygen, or if you can't dodge the alien atta
 
 ## Installation
 
-To play this game, you need to download it from our website, [CLICK HERE](#) to download it.
+To play this game, you need to download it from our website, [CLICK HERE](https://amen6.github.io/Interactive_Story/) to download it.
 
 ---
 
