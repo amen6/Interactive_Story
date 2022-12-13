@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap'); 
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body {
+    font: 16px "Montserrat";
+    color: #fff;
+    height: 100%;
+    background: url("https://www.elitedangerous.com/_nuxt/img/space.5c802e3.jpg");
+}
+
+a {
+    display: inline-block;
+    color: #fff;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 1%;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.logo {
+    display: block;
+    background: url("pictures/logo_no_text.svg");
+    width: 70px;
+    height: 70px;
+    background-position: 100% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.buy_now {
+  background: #841010;
+}
+
+header {
+    position: relative;
+    height: 60%;
+    background: url("pictures/astronaut.jpg");
+    background-position: center;
+    background-size: 100% 200%;
+}
+
+.hero {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 50%;
+    padding: 30px 30px 30px;
+    background: #000;
+}
+
+.hero h1 {
+    font-weight: 500;
+    color: #c01010;
+}
+
+main {
+    margin-block: 25px;
+    padding-inline: 3%;
+}
+
+.main_title {
+    padding: 10px;
+    margin-block: 25px;
+    background: linear-gradient(270deg,rgba(155,185,203,0) 0,rgba(180,10,10,.9) 50%,rgba(155,185,203,0));
+    text-align: center;
+    font-size: 46px;
+    color: #000;
+}
+
+.img_container {
+    flex: 1 1 70%;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.beside_main_img {
+    flex: 1 1 30%;
+    align-self: center;
+    padding-left: 20px;
+}
+
+.beside_main_img h1{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.beside_main_img h3{
+    font-size: 22px;
+    font-weight: 500;
+    color: #841010;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+}
+
+.footer_words, .footer_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.footer_words a, .footer_icons img {
+    margin-left: 10px;
+}
+
+.footer_icons img {
+    height: 20px;
+}
+
+@media (max-width: 770px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 80px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+
+  .buy_now {
+    background: none;
+  }
+
+  header {
+    height: 50vh;
+    display: flex;
+  }
+
+  .hero {
+    position: static;
+    width: 100%;
+    z-index: 1;
+    margin-top: auto;
+    align-self: baseline;
+    padding: 10px 30px 15px;
+  }
+
+  .header_background {
+    background: url("pictures/astronaut.jpg");
+    position: absolute;
+    top: 0;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-position: center;
+    background-size: 110% 200%;
+  }
+
+  .beside_main_img {
+    flex: 1 1 100%;
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .main_title {
+    font-size: 30px;
+  } 
+}
+
+
+@media (max-width: 600px) {
+  .hero {
+    margin-top: 10%;
+    margin-inline: 5%;
+    max-height: fit-content;
+  }
+}
